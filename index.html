@@ -1,153 +1,306 @@
-<!DOCTYPE HTML>
+<!DOCTYPE html>
 <!--
 	Miniport by HTML5 UP
 	html5up.net | @ajlkn
 	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 -->
 <html>
-	<head>
-		<script>document.write('<script src="http://' + (location.host || '${1:localhost}').split(':')[0] + ':${2:35729}/livereload.js?snipver=1"></' + 'script>')</script>
-		<title>Graham Ross Portfolio</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<link rel="stylesheet" href="assets/css/main.css" />
-	</head>
-	<body class="is-preload">
+  <head>
+    <script>
+      document.write(
+        '<script src="http://' +
+          (location.host || "${1:localhost}").split(":")[0] +
+          ':${2:35729}/livereload.js?snipver=1"></' +
+          "script>"
+      );
+    </script>
+    <title>Graham Ross Portfolio</title>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, user-scalable=no"
+    />
+    <link rel="stylesheet" href="assets/css/main.css" />
+  </head>
+  <body class="is-preload">
+    <!-- Nav -->
+    <nav id="nav">
+      <ul class="container">
+        <li><a href="#top">Top</a></li>
+        <li><a href="#work">About</a></li>
+        <li><a href="#portfolio">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
 
-		<!-- Nav -->
-			<nav id="nav">
-				<ul class="container">
-					<li><a href="#top">Top</a></li>
-					<li><a href="#work">About</a></li>
-					<li><a href="#portfolio">Projects</a></li>
-					<li><a href="#contact">Contact</a></li>
-				</ul>
-			</nav>
+    <!-- Home -->
+    <article id="top">
+      <div id="bkg-img">
+        <div id="layer-bkg-img" class="wrapper">
+          <div class="container">
+            <div class="row">
+              <div class="col-8 col-7-large col-12-medium" style="margin: auto">
+                <header style="color: white">
+                  <h1 style="color: white">
+                    <strong style="color: white">Graham Ross</strong>
+                  </h1>
+                  <p>Software Engineer</p>
+                  <ul class="social">
+                    <li>
+                      <a
+                        href="https://www.linkedin.com/in/grahamross12/"
+                        target="_blank"
+                        class="icon brands fa-linkedin-in"
+                        ><span class="label">LinkedIn</span></a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        href="https://github.com/grahamross12"
+                        target="_blank"
+                        class="icon brands fa fa-github"
+                        ><span class="label">Github</span></a
+                      >
+                    </li>
+                  </ul>
+                </header>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </article>
 
-		<!-- Home -->
-			<article id="top">
-				<div id="bkg-img">
-					<div id="layer-bkg-img" class="wrapper">
-						<div class="container">
-							<div class="row">
-								<div class="col-8 col-7-large col-12-medium" style="margin: auto">
-									<header style="color: white">
-										<h1 style="color: white">I'm <strong style="color: white">Graham Ross</strong>.</h1>
-										<p>This is my portfolio.</p>
-										<ul class="social" >
-											<li><a href="https://www.linkedin.com/in/grahamross12/" target="_blank" class="icon brands fa-linkedin-in"><span class="label">LinkedIn</span></a></li>
-											<li><a href="https://github.com/grahamross12" target="_blank" class="icon brands fa fa-github"><span class="label">Github</span></a></li>
-										</ul>
-									</header>
+    <!-- Work -->
+    <article id="work" class="wrapper style2">
+      <div class="container">
+        <header>
+          <h2>About</h2>
+          <p style="max-width: 800px; margin: auto">
+            I am a software engineer with a background in physics and experience
+            training machine learning models for computer vision tasks. I enjoy
+            creating and deploying web applications and have created multiple
+            sites to visualise machine learning methods.
+          </p>
+        </header>
+        <div class="row aln-center">
+          <div class="col-4 col-4-medium col-4-small">
+            <button onclick="window.open('images/graham_cv.pdf')">
+              <h3 id="view-cv">View CV</h3>
+            </button>
+          </div>
+        </div>
+      </div>
+    </article>
 
-								</div>
-							
-							</div>
+    <!-- Portfolio -->
+    <article id="portfolio" class="wrapper style3">
+      <div class="container">
+        <header>
+          <h2>Projects</h2>
+          <p>Have a look at some of the projects I have created so far.</p>
+        </header>
+        <div class="row">
+          <div class="col-6 col-6-medium col-12-small">
+            <article class="box style2">
+              <a class="image featured"
+                ><img
+                  class="myImg"
+                  id="myImg1"
+                  src="images/tech-blog.png"
+                  alt="Tech blog"
+              /></a>
 
-						</div>
-					</div>
-				</div>
-			</article>
+              <div id="myModal1" class="modal">
+                <!-- The Close Button -->
+                <span class="close" id="close1">&times;</span>
 
-		<!-- Work -->
-			<article id="work" class="wrapper style2">
-				<div class="container">
-					<header>
-						<h2>About</h2>
-						<p>I am a final year physics student looking to develop my skills in coding and move into a career in software engineering. I am very interested in artificial intelligence and I have undertaken multiple machine learning projects.</p>
-					</header>
-					<div class="row aln-center">
+                <!-- Modal Content (The Image) -->
+                <img class="modal-content" id="img01" />
 
-						<div class="col-4 col-4-medium col-4-small">
-							<button onclick="window.open('images/graham_cv.pdf')">
-									<h3 id="view-cv">View CV</h3>
-							</button>
-						</div>
-					</div>
+                <!-- Modal Caption (Image Text) -->
+                <div class="caption" id="caption1"></div>
+              </div>
 
-				</div>
-			</article>
+              <h3>
+                <a
+                  href="https://main.d1r07v59n9ix4f.amplifyapp.com/"
+                  target="_blank"
+                  >Tech Blog</a
+                >
+              </h3>
+              <p>
+                <i> NodeJS, Express, MySQL, Sequelize, ReactJS </i>
+              </p>
 
-		<!-- Portfolio -->
-			<article id="portfolio" class="wrapper style3">
-				<div class="container">
-					<header>
-						<h2>Projects</h2>
-						<p>Have a look at some of the projects I have created so far.</p>
-					</header>
-					<div class="row">
-						<div class="col-6 col-6-medium col-12-small">
-							<article class="box style2">
-								<a class="image featured"><img class='myImg' id='myImg1' src="images/news-website.png" alt="News Website" /></a>
+              <p>
+                A blog website for users to post tech related tutorials,
+                inspired by <a href="https://dev.to/">dev.to</a>. The app is
+                integrated with a third party authentication provider to allow
+                users to create accounts.
+              </p>
+              <a
+                class="github-button"
+                href="https://github.com/grahamross12/blog-website"
+                target="_blank"
+                >Github</a
+              >
+            </article>
+          </div>
+          <div class="col-6 col-6-medium col-12-small">
+            <article class="box style2">
+              <a class="image featured"
+                ><img
+                  class="myImg"
+                  id="myImg2"
+                  src="images/doodle-recognition.png"
+                  alt="Doodle Recognition"
+              /></a>
 
-								<div id="myModal1" class="modal">
+              <div id="myModal2" class="modal">
+                <!-- The Close Button -->
+                <span class="close" id="close2">&times;</span>
 
-								  <!-- The Close Button -->
-								  <span class="close">&times;</span>
+                <!-- Modal Content (The Image) -->
+                <img class="modal-content" id="img02" />
 
-								  <!-- Modal Content (The Image) -->
-								  <img class="modal-content" id="img01">
+                <!-- Modal Caption (Image Text) -->
+                <div class="caption" id="caption2"></div>
+              </div>
 
-								  <!-- Modal Caption (Image Text) -->
-								  <div class="caption" id="caption1"></div>
-								</div>
+              <h3>Doodle Recognition</h3>
+              <p>
+                <i> Python, PyTorch, ReactJS, ONNX </i>
+              </p>
+              <p>
+                A web application which can classify doodles in real time. I
+                trained a CNN using the
+                <a href="https://quickdraw.withgoogle.com/data">Quick, Draw!</a>
+                dataset in PyTorch and used the ONNX runtime to allow it to run
+                in the browser.
+              </p>
+              <a
+                class="github-button"
+                href="https://github.com/grahamross12/ode-solver"
+                target="_blank"
+                >Github</a
+              >
+            </article>
+          </div>
 
-								<h3><a href="http://news-website-graham.herokuapp.com/" target="_blank">News Website</a></h3>
-								<p>A full stack website using NewsAPI to show news articles from a variety of websites. Users can create accounts and save articles of their choice. The website was created using Flask and SQLite.</p>
-								<a  class="github-button" href='https://github.com/grahamross12/news-website' target="_blank">Github</a>
-							</article>
-						</div>
-						<div class="col-6 col-6-medium col-12-small">
-							<article class="box style2">
-								<a class="image featured"><img class='myImg' id='myImg2' src="images/ode-solver.png" alt="ODE solver" /></a>
+          <div class="col-6 col-6-medium col-12-small">
+            <article class="box style2">
+              <a class="image featured"
+                ><img
+                  class="myImg"
+                  id="myImg3"
+                  src="images/genetic-algorithm4.png"
+                  alt="Genetic Algorithm Visualiser"
+              /></a>
 
-								<div id="myModal2" class="modal">
+              <div id="myModal3" class="modal">
+                <!-- The Close Button -->
+                <span class="close" id="close3">&times;</span>
 
-								  <!-- The Close Button -->
-								  <span class="close">&times;</span>
+                <!-- Modal Content (The Image) -->
+                <img class="modal-content" id="img03" />
 
-								  <!-- Modal Content (The Image) -->
-								  <img class="modal-content" id="img02">
+                <!-- Modal Caption (Image Text) -->
+                <div class="caption" id="caption3"></div>
+              </div>
 
-								  <!-- Modal Caption (Image Text) -->
-								  <div class='caption' id="caption2"></div>
-								</div>
+              <h3>
+                <a
+                  href="http://news-website-graham.herokuapp.com/"
+                  target="_blank"
+                  >Genetic Algorithm Visualiser</a
+                >
+              </h3>
+              <p>
+                <i> JavaScript, ReactJS </i>
+              </p>
 
-								<h3>ODE Solver</h3>
-								<p>A genetic algorithm to solve ordinary differential equations. This was created using Python and utilised Matplotlib and Numpy packages.</p>
-								<a  class="github-button" href='https://github.com/grahamross12/ode-solver' target="_blank">Github</a>
-							</article>
-						</div>
+              <p>
+                A web application to demonstrate how genetic algorithms can be
+                used to solve the travelling salesman problem. Users can tweak
+                parameters to find the shortest path between all the points.
+              </p>
+              <a
+                class="github-button"
+                href="https://github.com/grahamross12/news-website"
+                target="_blank"
+                >Github</a
+              >
+            </article>
+          </div>
+          <div class="col-6 col-6-medium col-12-small">
+            <article class="box style2">
+              <a class="image featured"
+                ><img
+                  class="myImg"
+                  id="myImg4"
+                  src="images/ode-solver.png"
+                  alt="ODE solver"
+              /></a>
 
+              <div id="myModal4" class="modal">
+                <!-- The Close Button -->
+                <span class="close" id="close4">&times;</span>
 
-					</div>
+                <!-- Modal Content (The Image) -->
+                <img class="modal-content" id="img04" />
 
-				</div>
-			</article>
+                <!-- Modal Caption (Image Text) -->
+                <div class="caption" id="caption4"></div>
+              </div>
 
-		<!-- Contact -->
-			<article id="contact" class="wrapper style4">
-				<div class="container medium">
-					<header>
-						<h2>Contact</h2>
-						<p>Feel free to contact me via <a href="https://www.linkedin.com/in/grahamross12/" target="_blank">LinkedIn</a> or sent me an email at <a href="mailto:grahamross99@gmail.com">grahamross99@gmail.com</a>.</p>
-					</header>
-					<div class="row">
-						<div class="col-12">
-						</div>
-						
-					</div>
+              <h3>ODE Solver</h3>
+              <p>
+                <i> Python </i>
+              </p>
+              <p>
+                A genetic algorithm to solve ordinary differential equations.
+                This was created using Python and utilised Matplotlib and Numpy
+                packages.
+              </p>
+              <a
+                class="github-button"
+                href="https://github.com/grahamross12/ode-solver"
+                target="_blank"
+                >Github</a
+              >
+            </article>
+          </div>
+        </div>
+      </div>
+    </article>
 
-				</div>
-			</article>
+    <!-- Contact -->
+    <article id="contact" class="wrapper style4">
+      <div class="container medium">
+        <header>
+          <h2>Contact</h2>
+          <p>
+            Feel free to contact me via
+            <a href="https://www.linkedin.com/in/grahamross12/" target="_blank"
+              >LinkedIn</a
+            >
+            or sent me an email at
+            <a href="mailto:grahamross99@gmail.com">grahamross99@gmail.com</a>.
+          </p>
+        </header>
+        <div class="row">
+          <div class="col-12"></div>
+        </div>
+      </div>
+    </article>
 
-		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/jquery.scrolly.min.js"></script>
-			<script src="assets/js/browser.min.js"></script>
-			<script src="assets/js/breakpoints.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<script src="assets/js/main.js"></script>
-
-	</body>
+    <!-- Scripts -->
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/jquery.scrolly.min.js"></script>
+    <script src="assets/js/browser.min.js"></script>
+    <script src="assets/js/breakpoints.min.js"></script>
+    <script src="assets/js/util.js"></script>
+    <script src="assets/js/main.js"></script>
+  </body>
 </html>
